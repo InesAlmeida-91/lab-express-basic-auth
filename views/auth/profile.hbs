@@ -1,1 +1,9 @@
-<h2>{{username}} Profile page</h2>
+{{#if username}}
+  <h2>Welcome, {{ username }}!</h2>
+  <p>This is your profile page my friend!</p>
+  <button>
+    <a href="/auth/profile/{{username}}">Reload the page</a>
+  </button>
+{{else}}
+  <p>Still no logged in user, sorry!</p>
+{{/if}}
